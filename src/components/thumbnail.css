@@ -1,7 +1,37 @@
-.thumbnail img {
-  width: 400px;
+.thumbnail {
+  position: relative;
+  border: 0;
   height: 400px;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 10px;
+}
+
+.thumbnail p {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  color: white;
+  padding-right: 20px;
+}
+
+.thumbnail::before {
+  content: '';
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
   border-radius: 10px;
 }

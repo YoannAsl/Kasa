@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './thumbnail.css';
+import './Thumbnail.css';
+import { Link } from 'react-router-dom';
 
 export class Thumbnail extends Component {
 	render() {
-		const { cover, title } = this.props.apartment;
+		const { cover, title, id } = this.props.apartment;
 		return (
-			<li className='thumbnail' style={{ listStyle: `none` }}>
-				<img src={cover} alt={`Photo of ` + title}></img>
-				<p>{title}</p>
-			</li>
+			<Link to={`/apartments/${id}`}>
+				<li className='thumbnail' style={{ listStyle: `none` }}>
+					<img src={cover} alt={`Photo of ` + title}></img>
+					<p>{title}</p>
+				</li>
+			</Link>
 		);
 	}
 }

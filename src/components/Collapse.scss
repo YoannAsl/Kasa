@@ -1,0 +1,26 @@
+.collapse {
+	margin: 30px 5%;
+	.trigger {
+		cursor: pointer;
+		font-size: 24px;
+		background-color: #ff6060;
+		color: white;
+		border-radius: 5px;
+		height: 47px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		p {
+			margin-left: 20px;
+		}
+		img {
+			margin-right: 35px;
+		}
+	}
+	.content {
+		color: #ff6060;
+		background-color: #f7f7f7;
+		padding: 18px;
+		border-radius: 5px;
+	}
+}
