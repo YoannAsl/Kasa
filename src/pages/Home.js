@@ -4,9 +4,9 @@ import { ThumbnailsContainer } from '../components/ThumbnailsContainer.js';
 export class Home extends Component {
 	render() {
 		return (
-			<div>
+			<main>
 				<ThumbnailsContainer apartments={this.props.apartments} />
-			</div>
+			</main>
 		);
 	}
 }

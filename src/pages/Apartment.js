@@ -2,48 +2,50 @@
 import React, { Component } from 'react';
 import { Collapse } from '../components/Collapse';
 import { Tag } from '../components/Tag';
-import './Apartment.css';
+import '../styles/Apartment.css';
+import { Carousel } from '../components/Carousel';
 
 export class Apartment extends Component {
 	render() {
+		const {
+			title,
+			location,
+			tags,
+			host,
+			rating,
+			description,
+			equipments,
+			pictures,
+		} = this.props.apartment[0];
 		return (
-			<div>
+			<main>
+				<Carousel pictures={pictures} />
 				<section className='apartment-infos'>
-					<h1>{this.props.apartment[0].title}</h1>
-					<p>{this.props.apartment[0].location}</p>
+					<h1>{title}</h1>
+					<p>{location}</p>
 					<ul className='tags'>
-						{this.props.apartment[0].tags.map((tag) => {
-							return <Tag content={tag} />;
+						{tags.map((tag) => {
+							return <Tag content={tag} key={tag} />;
 						})}
 					</ul>
 				</section>
 				<section>
 					<div className='host-infos'>
-						<p>{this.props.apartment[0].host.name}</p>
-						<img
-							src={this.props.apartment[0].host.picture}
-							alt={`Photo de ${this.props.apartment[0].host.name}`}
-						/>
+						<p>{host.name}</p>
+						<img src={host.picture} alt={`Photo de ${host.name}`} />
 					</div>
-					<div>{this.props.apartment[0].rating}</div>
+					<div>{rating}</div>
 				</section>
-				<div style={{ display: 'flex' }}>
-					<Collapse
-						title={'Description'}
-						content={this.props.apartment[0].description}
-						style={{ color: 'blue' }}
-					/>
+				<div className='collapse-container'>
+					<Collapse title={'Description'} content={description} />
 					<Collapse
 						title={'Équipements'}
-						content={this.props.apartment[0].equipments.map(
-							(eq) => {
-								return <li>{eq}</li>;
-							}
-						)}
-						style={{ width: '50%' }}
+						content={equipments.map((eq) => {
+							return <li key={eq}>{eq}</li>;
+						})}
 					/>
 				</div>
-			</div>
+			</main>
 		);
 	}
 }

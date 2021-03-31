@@ -26,7 +26,7 @@ export class About extends Component {
 			},
 		];
 		return (
-			<div>
+			<main>
 				<img
 					src={image}
 					alt={'Kluane National Park and Reserve of Canada, Canada'}
@@ -42,7 +42,7 @@ export class About extends Component {
 				{collapseContent.map((el) => {
 					return <Collapse title={el.title} content={el.content} />;
 				})}
-			</div>
+			</main>
 		);
 	}
 }

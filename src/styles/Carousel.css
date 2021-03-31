@@ -1,0 +1,25 @@
+.carousel {
+  position: relative;
+}
+
+.carousel .picture {
+  height: 415px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}
+
+.carousel .arrow-prev {
+  position: absolute;
+  left: 25px;
+  top: 40%;
+}
+
+.carousel .arrow-next {
+  position: absolute;
+  right: 25px;
+  top: 40%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}

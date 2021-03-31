@@ -1,5 +1,5 @@
 .tag {
-  width: 115px;
+  min-width: 75px;
   height: 25px;
   border-radius: 10px;
   background-color: #ff6060;
@@ -14,4 +14,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-right: 10px;
+  padding: 0 20px;
 }

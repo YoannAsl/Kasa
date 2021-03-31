@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import arrow from '../assets/arrow.svg';
-import './Collapse.css';
+import '../styles/Collapse.css';
 
 export class Collapse extends Component {
 	state = { collapsed: true };

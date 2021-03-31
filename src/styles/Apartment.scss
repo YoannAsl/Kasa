@@ -1,0 +1,34 @@
+@import '../variables';
+
+.tags {
+	display: flex;
+}
+
+.collapse-container {
+	display: flex;
+	justify-content: space-between;
+	.collapse {
+		width: 46%;
+		margin: 0;
+		.trigger {
+			color: blue;
+		}
+		.content {
+			height: 100px;
+			color: blue;
+		}
+	}
+}
+
+.host-infos {
+	display: flex;
+	p {
+		color: $primary;
+	}
+	img {
+		border-radius: 50%;
+		width: 65px;
+		height: 65px;
+		margin-left: 10px;
+	}
+}

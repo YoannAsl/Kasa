@@ -1,9 +1,11 @@
+@import '../variables';
+
 .collapse {
 	margin: 30px 5%;
 	.trigger {
 		cursor: pointer;
 		font-size: 24px;
-		background-color: #ff6060;
+		background-color: $primary;
 		color: white;
 		border-radius: 5px;
 		height: 47px;
@@ -18,7 +20,7 @@
 		}
 	}
 	.content {
-		color: #ff6060;
+		color: $primary;
 		background-color: #f7f7f7;
 		padding: 18px;
 		border-radius: 5px;

@@ -1,0 +1,37 @@
+.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.collapse-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.collapse-container .collapse {
+  width: 46%;
+  height: 100%;
+  margin: 0;
+}
+
+.host-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.host-infos p {
+  color: #ff6060;
+}
+
+.host-infos img {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  margin-left: 10px;
+}

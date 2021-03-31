@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Thumbnail.css';
+import '../styles/Thumbnail.css';
 import { Link } from 'react-router-dom';
 
 export class Thumbnail extends Component {
