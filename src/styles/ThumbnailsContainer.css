@@ -1,4 +1,4 @@
-#thumbnail-container {
+.thumbnail-container {
   padding: 50px;
   margin: 0 auto;
   display: -ms-grid;

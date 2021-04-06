@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import arrow from '../assets/arrow.svg';
+import arrow from '../assets/collapse-arrow.svg';
 import '../styles/Collapse.css';
 
 export class Collapse extends Component {

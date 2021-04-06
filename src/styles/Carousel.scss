@@ -1,5 +1,6 @@
 .carousel {
 	position: relative;
+	margin-bottom: 30px;
 	.picture {
 		height: 415px;
 		width: 100%;
@@ -10,11 +11,20 @@
 		position: absolute;
 		left: 25px;
 		top: 40%;
+		cursor: pointer;
 	}
 	.arrow-next {
 		position: absolute;
 		right: 25px;
 		top: 40%;
 		transform: rotate(180deg);
+		cursor: pointer;
+	}
+	.image-counter {
+		position: absolute;
+		bottom: 25px;
+		left: 50%;
+		color: white;
+		user-select: none;
 	}
 }

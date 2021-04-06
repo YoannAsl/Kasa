@@ -6,7 +6,7 @@ import '../styles/ThumbnailsContainer.css';
 export class ThumbnailsContainer extends Component {
 	render() {
 		return (
-			<ul id='thumbnail-container'>
+			<ul className='thumbnail-container'>
 				{this.props.apartments.map((apartment) => {
 					return (
 						<Thumbnail key={apartment.id} apartment={apartment} />

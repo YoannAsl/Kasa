@@ -40,7 +40,13 @@ export class About extends Component {
 					}}
 				></img>
 				{collapseContent.map((el) => {
-					return <Collapse title={el.title} content={el.content} />;
+					return (
+						<Collapse
+							key={el.title}
+							title={el.title}
+							content={el.content}
+						/>
+					);
 				})}
 			</main>
 		);

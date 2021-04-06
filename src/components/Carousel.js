@@ -40,7 +40,7 @@ export class Carousel extends Component {
 					src={this.props.pictures[this.state.currentImageIndex]}
 					alt="Photo de l'appartement"
 				/>
-				<p>
+				<p className='image-counter'>
 					{this.state.currentImageIndex + 1}/
 					{this.props.pictures.length}
 				</p>

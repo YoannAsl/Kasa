@@ -4,6 +4,21 @@
   display: flex;
 }
 
+.apartment-infos {
+  color: #ff6060;
+}
+
+.apartment-infos .apartment-title {
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.apartment-infos .apartment-location {
+  font-size: 18px;
+  margin: 0;
+}
+
 .collapse-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,8 +30,11 @@
 
 .collapse-container .collapse {
   width: 46%;
-  height: 100%;
   margin: 0;
+}
+
+.collapse-container .collapse .content {
+  height: 70%;
 }
 
 .host-infos {
