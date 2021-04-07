@@ -32,4 +32,13 @@ footer p {
   bottom: 0;
   font-size: 24px;
   color: white;
+  font-weight: 500;
+}
+
+@media (max-width: 481px) {
+  footer p {
+    margin: auto;
+    font-size: 12px;
+    bottom: 65px;
+  }
 }

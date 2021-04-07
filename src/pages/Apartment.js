@@ -47,7 +47,6 @@ export class Apartment extends Component {
 						<p>{host.name}</p>
 						<img src={host.picture} alt={`Photo de ${host.name}`} />
 					</div>
-					{/* for i < rating */}
 					<StarsContainer rating={rating} />
 				</section>
 				<div className='collapse-container'>

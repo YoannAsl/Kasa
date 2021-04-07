@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import image from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg';
 import { Collapse } from '../components/Collapse';
+import { ImageBanner } from '../components/ImageBanner';
 
 export class About extends Component {
 	render() {
@@ -27,18 +28,10 @@ export class About extends Component {
 		];
 		return (
 			<main>
-				<img
-					src={image}
+				<ImageBanner
+					image={image}
 					alt={'Kluane National Park and Reserve of Canada, Canada'}
-					style={{
-						width: '100%',
-						height: 230,
-						objectFit: 'cover',
-						mixBlendMode: 'darken',
-						borderRadius: 25,
-						// opacity: 0.9,
-					}}
-				></img>
+				/>
 				{collapseContent.map((el) => {
 					return (
 						<Collapse

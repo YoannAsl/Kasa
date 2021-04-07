@@ -10,6 +10,7 @@ export class StarsContainer extends Component {
 				? stars.push({ link: redstar, id: i, alt: 'Red star' })
 				: stars.push({ link: greystar, id: i, alt: 'Greystar' });
 		}
+
 		return (
 			<div className='stars-container'>
 				{stars.map((star) => {

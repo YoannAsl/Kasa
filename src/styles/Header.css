@@ -26,6 +26,7 @@ header nav a {
   color: #ff6060;
   font-size: 24px;
   text-decoration: none;
+  font-weight: 500;
 }
 
 @media (max-width: 480px) {
@@ -33,9 +34,10 @@ header nav a {
     width: 145px;
   }
   header nav {
-    width: 33%;
+    width: 40%;
   }
   header nav a {
     font-size: 12px;
+    text-transform: uppercase;
   }
 }
