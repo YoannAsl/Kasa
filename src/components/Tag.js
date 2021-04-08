@@ -3,11 +3,7 @@ import '../styles/Tag.css';
 
 export class Tag extends Component {
 	render() {
-		return (
-			<li className='tag'>
-				<p>{this.props.content}</p>
-			</li>
-		);
+		return <li className='tag'>{this.props.content}</li>;
 	}
 }
 

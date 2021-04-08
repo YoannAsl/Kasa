@@ -1,24 +1,23 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react';
+import '../styles/Apartment.css';
+import data from '../assets/data.json';
+import { Redirect } from 'react-router-dom';
+
 import { Collapse } from '../components/Collapse';
 import { Tag } from '../components/Tag';
-import '../styles/Apartment.css';
 import { Carousel } from '../components/Carousel';
-import { StarsContainer } from '../components/StarsContainer';
+import { Rating } from '../components/Rating';
 
 export class Apartment extends Component {
-	ratings = React.createRef();
-	displayRating() {
-		const maxRating = 5;
-		const container = document.querySelector('.rating-container');
-		const test = this.ratings.current;
-		console.log(test);
-		for (let i = 0; i < maxRating; i++) {
-			container.append('<div>test</div>');
-		}
-	}
-
 	render() {
+		if (!data.some((apt) => apt.id === this.props.match.params.id)) {
+			return <Redirect to='/404' />;
+		}
+		const apartment = data.filter(
+			(apt) => apt.id === this.props.match.params.id
+		);
+
 		const {
 			title,
 			location,
@@ -28,7 +27,7 @@ export class Apartment extends Component {
 			description,
 			equipments,
 			pictures,
-		} = this.props.apartment[0];
+		} = apartment[0];
 
 		return (
 			<main>
@@ -47,7 +46,7 @@ export class Apartment extends Component {
 						<p>{host.name}</p>
 						<img src={host.picture} alt={`Photo de ${host.name}`} />
 					</div>
-					<StarsContainer rating={rating} />
+					<Rating rating={rating} />
 				</section>
 				<div className='collapse-container'>
 					<Collapse title={'Description'} content={description} />

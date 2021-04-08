@@ -1,19 +1,15 @@
 import React from 'react';
+import data from './assets/data.json';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Apartment } from './pages/Apartment';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import data from './assets/data.json';
+import { ErrorPage } from './pages/ErrorPage';
 
 class App extends React.Component {
-	state = { apartments: [] };
-
-	componentDidMount() {
-		this.setState({ apartments: data });
-	}
-
 	render() {
 		return (
 			<div className='app'>
@@ -21,26 +17,16 @@ class App extends React.Component {
 					<Header />
 					<Switch>
 						<Route path='/' exact>
-							<Home apartments={this.state.apartments} />
+							<Home apartments={data} />
 						</Route>
 						<Route path='/about' component={About} />
 						<Route
 							path='/apartments/:id'
 							render={(routeProps) => (
-								<Apartment
-									{...routeProps}
-									apartment={this.state.apartments.filter(
-										(apt) => {
-											// eslint-disable-next-line no-unused-expressions
-											return (
-												apt.id ===
-												routeProps.match.params.id
-											);
-										}
-									)}
-								/>
+								<Apartment {...routeProps} />
 							)}
 						/>
+						<Route component={ErrorPage} />
 					</Switch>
 					<Footer />
 				</BrowserRouter>

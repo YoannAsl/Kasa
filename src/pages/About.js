@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import image from '../assets/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg';
+import image from '../assets/about-banner-image.jpg';
+
 import { Collapse } from '../components/Collapse';
 import { ImageBanner } from '../components/ImageBanner';
 
@@ -26,6 +27,7 @@ export class About extends Component {
 				content: `La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.`,
 			},
 		];
+
 		return (
 			<main>
 				<ImageBanner

@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import greystar from '../assets/grey-star.svg';
 import redstar from '../assets/red-star.svg';
 
-export class StarsContainer extends Component {
+export class Rating extends Component {
 	render() {
 		let stars = [];
-		for (let i = 0; i < 5; i++) {
+		const maxRating = 5;
+
+		for (let i = 0; i < maxRating; i++) {
 			this.props.rating > i
 				? stars.push({ link: redstar, id: i, alt: 'Red star' })
-				: stars.push({ link: greystar, id: i, alt: 'Greystar' });
+				: stars.push({ link: greystar, id: i, alt: 'Grey star' });
 		}
 
 		return (
@@ -21,4 +23,4 @@ export class StarsContainer extends Component {
 	}
 }
 
-export default StarsContainer;
+export default Rating;

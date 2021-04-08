@@ -6,13 +6,13 @@ import '../styles/ThumbnailsContainer.css';
 export class ThumbnailsContainer extends Component {
 	render() {
 		return (
-			<ul className='thumbnail-container'>
+			<div className='thumbnail-container'>
 				{this.props.apartments.map((apartment) => {
 					return (
 						<Thumbnail key={apartment.id} apartment={apartment} />
 					);
 				})}
-			</ul>
+			</div>
 		);
 	}
 }

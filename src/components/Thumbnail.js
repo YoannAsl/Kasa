@@ -8,10 +8,10 @@ export class Thumbnail extends Component {
 		const { cover, title, id } = this.props.apartment;
 		return (
 			<Link to={`/apartments/${id}`}>
-				<li className='thumbnail' style={{ listStyle: `none` }}>
+				<article className='thumbnail'>
 					<img src={cover} alt={`Photo of ` + title}></img>
 					<p>{title}</p>
-				</li>
+				</article>
 			</Link>
 		);
 	}
