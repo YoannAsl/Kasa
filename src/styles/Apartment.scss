@@ -2,18 +2,30 @@
 
 .tags {
 	display: flex;
+	flex-wrap: wrap;
 }
 
-.apartment-infos {
-	color: $primary;
-	.apartment-title {
-		font-size: 36px;
-		font-weight: normal;
-		margin: 0;
+.infos {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 25px;
+	.apartment-infos {
+		color: $primary;
+		.apartment-title {
+			font-size: 36px;
+			font-weight: 500;
+			margin: 0;
+		}
+		.apartment-location {
+			font-size: 18px;
+			margin: 2px 0 20px 0;
+			font-weight: 500;
+		}
 	}
-	.apartment-location {
-		font-size: 18px;
-		margin: 0;
+	.host-infos {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 }
 
@@ -30,15 +42,27 @@
 	}
 }
 
-.host-infos {
-	display: flex;
-	p {
-		color: $primary;
+@media (max-width: 481px) {
+	.infos {
+		flex-direction: column;
+		.apartment-infos {
+			color: $primary;
+			.apartment-title {
+				font-size: 18px;
+			}
+			.apartment-location {
+				font-size: 14px;
+			}
+		}
+		.host-infos {
+			flex-direction: row-reverse;
+		}
 	}
-	img {
-		border-radius: 50%;
-		width: 65px;
-		height: 65px;
-		margin-left: 10px;
+	.collapse-container {
+		flex-direction: column;
+		.collapse {
+			width: 100%;
+			margin-bottom: 20px;
+		}
 	}
 }

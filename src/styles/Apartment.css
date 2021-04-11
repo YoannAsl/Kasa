@@ -2,21 +2,47 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.apartment-infos {
+.infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.infos .apartment-infos {
   color: #ff6060;
 }
 
-.apartment-infos .apartment-title {
+.infos .apartment-infos .apartment-title {
   font-size: 36px;
-  font-weight: normal;
+  font-weight: 500;
   margin: 0;
 }
 
-.apartment-infos .apartment-location {
+.infos .apartment-infos .apartment-location {
   font-size: 18px;
-  margin: 0;
+  margin: 2px 0 20px 0;
+  font-weight: 500;
+}
+
+.infos .host-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .collapse-container {
@@ -37,19 +63,36 @@
   height: 70%;
 }
 
-.host-infos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.host-infos p {
-  color: #ff6060;
-}
-
-.host-infos img {
-  border-radius: 50%;
-  width: 65px;
-  height: 65px;
-  margin-left: 10px;
+@media (max-width: 481px) {
+  .infos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .infos .apartment-infos {
+    color: #ff6060;
+  }
+  .infos .apartment-infos .apartment-title {
+    font-size: 18px;
+  }
+  .infos .apartment-infos .apartment-location {
+    font-size: 14px;
+  }
+  .infos .host-infos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .collapse-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .collapse-container .collapse {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

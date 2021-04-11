@@ -13,6 +13,8 @@ export class Home extends Component {
 					alt={
 						'green and brown mountain beside body of water during daytime'
 					}
+					text={'Chez vous, partout et ailleurs'}
+					class={'home-banner'}
 				/>
 				<ThumbnailsContainer apartments={this.props.apartments} />
 			</main>

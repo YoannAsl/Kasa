@@ -30,6 +30,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 180px;
+  text-align: center;
 }
 
 .error-page a {
@@ -48,4 +49,16 @@
 
 .error-page a:visited {
   color: #ff6060;
+}
+
+@media (max-width: 491px) {
+  .error-page .error-404 {
+    font-size: 96px;
+  }
+  .error-page .error-text {
+    font-size: 18px;
+  }
+  .error-page a {
+    font-size: 14px;
+  }
 }

@@ -11,5 +11,17 @@
 	align-items: center;
 	justify-content: center;
 	margin-right: 10px;
+	margin-bottom: 5px;
 	padding: 0 20px;
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+@media (max-width: 481px) {
+	.tag {
+		font-size: 10px;
+		border-radius: 5px;
+		min-width: 45px;
+		height: 20px;
+	}
 }

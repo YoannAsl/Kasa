@@ -18,14 +18,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.collapse .trigger p {
-  margin-left: 20px;
-}
-
-.collapse .trigger img {
-  margin-right: 35px;
+  padding-left: 20px;
+  padding-right: 30px;
+  font-weight: 500;
 }
 
 .collapse .content {
@@ -33,4 +28,28 @@
   background-color: #f7f7f7;
   padding: 18px;
   border-radius: 5px;
+}
+
+.collapse .content p {
+  margin: 0;
+}
+
+@media (max-width: 481px) {
+  .collapse {
+    margin: 20px 0;
+  }
+  .collapse .trigger {
+    padding-left: 12px;
+    padding-right: 6px;
+    font-size: 13px;
+    height: 30px;
+  }
+  .collapse img {
+    height: 9px;
+    width: 15px;
+  }
+  .collapse .content {
+    font-size: 12px;
+    padding: 10px;
+  }
 }

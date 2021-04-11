@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react';
 import '../styles/Apartment.css';
 import data from '../assets/data.json';
@@ -8,6 +7,7 @@ import { Collapse } from '../components/Collapse';
 import { Tag } from '../components/Tag';
 import { Carousel } from '../components/Carousel';
 import { Rating } from '../components/Rating';
+import { Host } from '../components/Host';
 
 export class Apartment extends Component {
 	render() {
@@ -32,22 +32,22 @@ export class Apartment extends Component {
 		return (
 			<main>
 				<Carousel pictures={pictures} />
-				<section className='apartment-infos'>
-					<h1 className='apartment-title'>{title}</h1>
-					<p className='apartment-location'>{location}</p>
-					<ul className='tags'>
-						{tags.map((tag) => {
-							return <Tag content={tag} key={tag} />;
-						})}
-					</ul>
-				</section>
-				<section>
-					<div className='host-infos'>
-						<p>{host.name}</p>
-						<img src={host.picture} alt={`Photo de ${host.name}`} />
+				<div className={'infos'}>
+					<section className='apartment-infos'>
+						<h1 className='apartment-title'>{title}</h1>
+						<p className='apartment-location'>{location}</p>
+						<ul className='tags'>
+							{tags.map((tag) => {
+								return <Tag content={tag} key={tag} />;
+							})}
+						</ul>
+					</section>
+
+					<div className={'host-infos'}>
+						<Host name={host.name} picture={host.picture} />
+						<Rating rating={rating} />
 					</div>
-					<Rating rating={rating} />
-				</section>
+				</div>
 				<div className='collapse-container'>
 					<Collapse title={'Description'} content={description} />
 					<Collapse
