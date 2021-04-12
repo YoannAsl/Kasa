@@ -10,14 +10,14 @@ export class Rating extends Component {
 
 		for (let i = 0; i < maxRating; i++) {
 			this.props.rating > i
-				? stars.push({ link: redstar, id: i, alt: 'Red star' })
-				: stars.push({ link: greystar, id: i, alt: 'Grey star' });
+				? stars.push({ link: redstar, alt: 'Red star' })
+				: stars.push({ link: greystar, alt: 'Grey star' });
 		}
 
 		return (
 			<div className='rating'>
-				{stars.map((star) => {
-					return <img src={star.link} key={star.id} alt={star.alt} />;
+				{stars.map((star, index) => {
+					return <img src={star.link} key={index} alt={star.alt} />;
 				})}
 			</div>
 		);
