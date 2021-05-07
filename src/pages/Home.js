@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import image from '../assets/home-banner-image.jpg';
 
-import { ThumbnailsContainer } from '../components/ThumbnailsContainer.js';
+import '../styles/Home.css';
 import ImageBanner from '../components/ImageBanner';
+import { Thumbnail } from './../components/Thumbnail';
 
 export class Home extends Component {
 	render() {
@@ -16,7 +17,16 @@ export class Home extends Component {
 					text={'Chez vous, partout et ailleurs'}
 					class={'home-banner'}
 				/>
-				<ThumbnailsContainer apartments={this.props.apartments} />
+				<div className='thumbnails-container'>
+					{this.props.apartments.map((apartment) => {
+						return (
+							<Thumbnail
+								key={apartment.id}
+								apartment={apartment}
+							/>
+						);
+					})}
+				</div>
 			</main>
 		);
 	}
