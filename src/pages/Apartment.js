@@ -11,6 +11,7 @@ import { Host } from '../components/Host';
 
 export class Apartment extends Component {
 	render() {
+		// Redirects to 404 if wrong id
 		if (!data.some((apt) => apt.id === this.props.match.params.id)) {
 			return <Redirect to='/404' />;
 		}

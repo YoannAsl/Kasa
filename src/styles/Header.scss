@@ -8,8 +8,10 @@ header {
 	nav {
 		display: flex;
 		align-items: center;
-		width: 15%;
 		justify-content: space-between;
+		:last-child {
+			margin-left: 10px;
+		}
 		a {
 			color: $primary;
 			font-size: 24px;
@@ -27,7 +29,6 @@ header {
 			width: 145px;
 		}
 		nav {
-			width: 40%;
 			a {
 				font-size: 12px;
 				text-transform: uppercase;

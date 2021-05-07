@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import '../styles/Thumbnail.css';
 import { Link } from 'react-router-dom';
 
@@ -16,10 +15,5 @@ export class Thumbnail extends Component {
 		);
 	}
 }
-
-// Proptypes
-Thumbnail.propTypes = {
-	apartment: PropTypes.object.isRequired,
-};
 
 export default Thumbnail;

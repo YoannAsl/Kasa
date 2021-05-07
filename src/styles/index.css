@@ -10,7 +10,12 @@ li {
 }
 
 body {
-	margin: 0 5%;
+	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+main,
+header {
+	margin: 0 5%;
 }
