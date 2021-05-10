@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/ErrorPage.css';
 
-export class ErrorPage extends Component {
+class ErrorPage extends Component {
 	render() {
 		return (
 			<main className='error-page'>

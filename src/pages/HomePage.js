@@ -3,9 +3,9 @@ import image from '../assets/home-banner-image.jpg';
 
 import '../styles/Home.css';
 import ImageBanner from '../components/ImageBanner';
-import { Thumbnail } from './../components/Thumbnail';
+import Thumbnail from '../components/Thumbnail';
 
-export class Home extends Component {
+class HomePage extends Component {
 	render() {
 		return (
 			<main>
@@ -32,4 +32,4 @@ export class Home extends Component {
 	}
 }
 
-export default Home;
+export default HomePage;

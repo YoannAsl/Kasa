@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import '../styles/Host.css';
 
-export class Host extends Component {
+class Host extends Component {
 	render() {
 		const { name, picture } = this.props;
 		const firstName = name.split(' ')[0];

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import arrow from '../assets/collapse-arrow.svg';
 import '../styles/Collapse.css';
 
-export class Collapse extends Component {
+class Collapse extends Component {
 	state = { collapsed: true };
 
 	handleClick = () => {

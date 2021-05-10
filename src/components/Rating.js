@@ -3,7 +3,7 @@ import greystar from '../assets/grey-star.svg';
 import redstar from '../assets/red-star.svg';
 import '../styles/Rating.css';
 
-export class Rating extends Component {
+class Rating extends Component {
 	render() {
 		let stars = [];
 		const maxRating = 5;

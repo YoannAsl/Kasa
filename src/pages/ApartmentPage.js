@@ -3,13 +3,13 @@ import '../styles/Apartment.css';
 import data from '../assets/data.json';
 import { Redirect } from 'react-router-dom';
 
-import { Collapse } from '../components/Collapse';
-import { Tag } from '../components/Tag';
-import { Carousel } from '../components/Carousel';
-import { Rating } from '../components/Rating';
-import { Host } from '../components/Host';
+import Collapse from '../components/Collapse';
+import Tag from '../components/Tag';
+import Carousel from '../components/Carousel';
+import Rating from '../components/Rating';
+import Host from '../components/Host';
 
-export class Apartment extends Component {
+class ApartmentPage extends Component {
 	render() {
 		// Redirects to 404 if wrong id
 		if (!data.some((apt) => apt.id === this.props.match.params.id)) {
@@ -63,4 +63,4 @@ export class Apartment extends Component {
 	}
 }
 
-export default Apartment;
+export default ApartmentPage;

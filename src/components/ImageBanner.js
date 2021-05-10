@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/ImageBanner.css';
 
-export class ImageBanner extends Component {
+class ImageBanner extends Component {
 	render() {
 		let className = 'image-banner';
 		if (this.props.class === 'home-banner') {

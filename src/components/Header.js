@@ -3,7 +3,7 @@ import logo from '../assets/logo.svg';
 import '../styles/Header.css';
 import { NavLink } from 'react-router-dom';
 
-export class Header extends Component {
+class Header extends Component {
 	render() {
 		const activeStyle = { textDecoration: 'underline' };
 		return (

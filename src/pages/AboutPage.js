@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import image from '../assets/about-banner-image.jpg';
 
-import { Collapse } from '../components/Collapse';
-import { ImageBanner } from '../components/ImageBanner';
+import Collapse from '../components/Collapse';
+import ImageBanner from '../components/ImageBanner';
 
-export class About extends Component {
+class AboutPage extends Component {
 	render() {
 		const collapseContent = [
 			{
@@ -48,4 +48,4 @@ export class About extends Component {
 	}
 }
 
-export default About;
+export default AboutPage;

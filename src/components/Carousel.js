@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import arrow from '../assets/carousel-arrow.svg';
 import '../styles/Carousel.css';
 
-export class Carousel extends Component {
+class Carousel extends Component {
 	state = {
 		currentImageIndex: 0,
 	};
