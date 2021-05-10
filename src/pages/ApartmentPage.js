@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../styles/Apartment.scss';
-import data from '../assets/data.json';
 import { Redirect } from 'react-router-dom';
 
 import Collapse from '../components/Collapse';
@@ -12,10 +11,15 @@ import Host from '../components/Host';
 class ApartmentPage extends Component {
 	render() {
 		// Redirects to 404 if wrong id
-		if (!data.some((apt) => apt.id === this.props.match.params.id)) {
+		if (
+			!this.props.apartments.some(
+				(apt) => apt.id === this.props.match.params.id
+			)
+		) {
 			return <Redirect to='/404' />;
 		}
-		const apartment = data.filter(
+
+		const apartment = this.props.apartments.filter(
 			(apt) => apt.id === this.props.match.params.id
 		);
 

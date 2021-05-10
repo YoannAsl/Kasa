@@ -23,7 +23,10 @@ class App extends React.Component {
 						<Route
 							path='/apartments/:id'
 							render={(routeProps) => (
-								<ApartmentPage {...routeProps} />
+								<ApartmentPage
+									{...routeProps}
+									apartments={data}
+								/>
 							)}
 						/>
 						<Route component={ErrorPage} />

@@ -29,12 +29,24 @@ class Carousel extends Component {
 	render() {
 		return (
 			<div className='carousel'>
-				<img
-					className='arrow-prev'
-					src={arrow}
-					alt='Previous slide arrow'
-					onClick={this.previousSlide}
-				/>
+				{/* Doesnt display the arrows if there is only 1 picture */}
+				{this.props.pictures.length !== 1 ? (
+					<>
+						<img
+							className='arrow-prev'
+							src={arrow}
+							alt='Previous slide arrow'
+							onClick={this.previousSlide}
+						/>
+						<img
+							className='arrow-next'
+							src={arrow}
+							alt='Next slide arrow'
+							onClick={this.nextSlide}
+						/>
+					</>
+				) : null}
+
 				<img
 					className='picture'
 					src={this.props.pictures[this.state.currentImageIndex]}
@@ -44,12 +56,6 @@ class Carousel extends Component {
 					{this.state.currentImageIndex + 1}/
 					{this.props.pictures.length}
 				</p>
-				<img
-					className='arrow-next'
-					src={arrow}
-					alt='Next slide arrow'
-					onClick={this.nextSlide}
-				/>
 			</div>
 		);
 	}
