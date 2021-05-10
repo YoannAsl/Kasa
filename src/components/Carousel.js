@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react';
 import arrow from '../assets/carousel-arrow.svg';
-import '../styles/Carousel.css';
+import '../styles/Carousel.scss';
 
 class Carousel extends Component {
 	state = {

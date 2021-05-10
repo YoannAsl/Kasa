@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import image from '../assets/home-banner-image.jpg';
 
-import '../styles/Home.css';
+import '../styles/Home.scss';
 import ImageBanner from '../components/ImageBanner';
 import Thumbnail from '../components/Thumbnail';
 
@@ -18,14 +18,9 @@ class HomePage extends Component {
 					class={'home-banner'}
 				/>
 				<div className='thumbnails-container'>
-					{this.props.apartments.map((apartment) => {
-						return (
-							<Thumbnail
-								key={apartment.id}
-								apartment={apartment}
-							/>
-						);
-					})}
+					{this.props.apartments.map((apartment) => (
+						<Thumbnail key={apartment.id} apartment={apartment} />
+					))}
 				</div>
 			</main>
 		);

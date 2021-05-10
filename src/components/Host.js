@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { Component } from 'react';
-import '../styles/Host.css';
+import '../styles/Host.scss';
 
 class Host extends Component {
 	render() {

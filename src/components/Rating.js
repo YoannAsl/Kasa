@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import greystar from '../assets/grey-star.svg';
 import redstar from '../assets/red-star.svg';
-import '../styles/Rating.css';
+import '../styles/Rating.scss';
 
 class Rating extends Component {
 	render() {
@@ -16,9 +16,9 @@ class Rating extends Component {
 
 		return (
 			<div className='rating'>
-				{stars.map((star, index) => {
-					return <img src={star.link} key={index} alt={star.alt} />;
-				})}
+				{stars.map((star, index) => (
+					<img src={star.link} key={index} alt={star.alt} />
+				))}
 			</div>
 		);
 	}

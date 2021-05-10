@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/Apartment.css';
+import '../styles/Apartment.scss';
 import data from '../assets/data.json';
 import { Redirect } from 'react-router-dom';
 
@@ -38,9 +38,9 @@ class ApartmentPage extends Component {
 						<h1 className='apartment-title'>{title}</h1>
 						<p className='apartment-location'>{location}</p>
 						<ul className='tags'>
-							{tags.map((tag) => {
-								return <Tag content={tag} key={tag} />;
-							})}
+							{tags.map((tag) => (
+								<Tag content={tag} key={tag} />
+							))}
 						</ul>
 					</section>
 
@@ -53,9 +53,9 @@ class ApartmentPage extends Component {
 					<Collapse title={'Description'} content={description} />
 					<Collapse
 						title={'Équipements'}
-						content={equipments.map((eq) => {
-							return <li key={eq}>{eq}</li>;
-						})}
+						content={equipments.map((eq) => (
+							<li key={eq}>{eq}</li>
+						))}
 					/>
 				</div>
 			</main>
