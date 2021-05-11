@@ -29,6 +29,12 @@ class Carousel extends Component {
 	render() {
 		return (
 			<div className='carousel'>
+				<img
+					className='picture'
+					src={this.props.pictures[this.state.currentImageIndex]}
+					alt="Photo de l'appartement"
+				/>
+
 				{/* Doesnt display the arrows if there is only 1 picture */}
 				{this.props.pictures.length !== 1 ? (
 					<>
@@ -47,11 +53,6 @@ class Carousel extends Component {
 					</>
 				) : null}
 
-				<img
-					className='picture'
-					src={this.props.pictures[this.state.currentImageIndex]}
-					alt="Photo de l'appartement"
-				/>
 				<p className='image-counter'>
 					{this.state.currentImageIndex + 1}/
 					{this.props.pictures.length}

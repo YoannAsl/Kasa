@@ -4,8 +4,8 @@ import '../styles/ImageBanner.scss';
 class ImageBanner extends Component {
 	render() {
 		let className = 'image-banner';
-		if (this.props.class === 'home-banner') {
-			className += ' home-banner';
+		if (this.props.class) {
+			className += ` ${this.props.class}`;
 		}
 
 		return (
