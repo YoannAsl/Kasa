@@ -16,12 +16,12 @@ class App extends React.Component {
 				<BrowserRouter>
 					<Header />
 					<Switch>
-						<Route path='/kasa' exact>
+						<Route path='/' exact>
 							<HomePage apartments={data} />
 						</Route>
-						<Route path='/kasa/about' component={AboutPage} />
+						<Route path='/about' component={AboutPage} />
 						<Route
-							path='/kasa/apartments/:id'
+							path='/apartments/:id'
 							render={(routeProps) => (
 								<ApartmentPage
 									{...routeProps}
