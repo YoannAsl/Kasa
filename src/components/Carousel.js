@@ -10,6 +10,7 @@ class Carousel extends Component {
 
 	previousSlide = () => {
 		const { currentImageIndex } = this.state;
+		// If the first picture is displayed, displays the last one
 		const index =
 			currentImageIndex === 0
 				? this.props.pictures.length - 1
@@ -19,6 +20,7 @@ class Carousel extends Component {
 
 	nextSlide = () => {
 		const { currentImageIndex } = this.state;
+		// If the last picture is displayed, displays the first one
 		const index =
 			currentImageIndex === this.props.pictures.length - 1
 				? 0
@@ -36,7 +38,7 @@ class Carousel extends Component {
 				/>
 
 				{/* Doesnt display the arrows if there is only 1 picture */}
-				{this.props.pictures.length !== 1 ? (
+				{this.props.pictures.length > 1 ? (
 					<>
 						<img
 							className='arrow-prev'

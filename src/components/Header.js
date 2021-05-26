@@ -10,10 +10,10 @@ class Header extends Component {
 			<header>
 				<img src={logo} alt={'Kasa logo'}></img>
 				<nav>
-					<NavLink to='/' exact activeStyle={activeStyle}>
+					<NavLink to='/kasa' exact activeStyle={activeStyle}>
 						Accueil
 					</NavLink>
-					<NavLink to='/about' activeStyle={activeStyle}>
+					<NavLink to='/kasa/about' activeStyle={activeStyle}>
 						A propos
 					</NavLink>
 				</nav>
