@@ -1,13 +1,29 @@
 import Head from 'next/head';
+import ImageBanner from '../components/ImageBanner';
+import Thumbnail from '../components/Thumbnail';
 
-export default function Home() {
+const Home = ({ apartments }) => {
 	return (
-		<div className='flex flex-col items-center justify-center min-h-screen py-2'>
+		<main>
 			<Head>
 				<title>Kasa - Home</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<p>Home</p>
-		</div>
+			<ImageBanner
+				image='/../public/home-banner-image.jpg'
+				alt={
+					'green and brown mountain beside body of water during daytime'
+				}
+				text={'Chez vous, partout et ailleurs'}
+				addedClass={'home-banner'}
+			/>
+			<div className='thumbnails-container'>
+				{apartments.map((apartment) => (
+					<Thumbnail key={apartment.id} apartment={apartment} />
+				))}
+			</div>
+		</main>
 	);
-}
+};
+
+export default Home;

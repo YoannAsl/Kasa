@@ -3,7 +3,7 @@ import Link from 'next/link';
 const Header = () => {
 	return (
 		<header>
-			{/* <img src={logo} alt={'Kasa logo'}></img> */}
+			<img src='logo.svg' alt={'Kasa logo'}></img>
 			<nav>
 				<Link href='/'>
 					<a>Accueil</a>

@@ -1,13 +1,16 @@
 import 'tailwindcss/tailwind.css';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
+import data from '../public/data.json';
 
-function MyApp({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
 	return (
 		<>
 			<Header />
-			<Component {...pageProps} />
+			<Component {...pageProps} apartments={data} />
+			<Footer />
 		</>
 	);
-}
+};
 
-export default MyApp;
+export default App;
