@@ -7,7 +7,11 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		fontFamily: { sans: ['Montserrat'] },
-		extend: {},
+		extend: {
+			colors: {
+				primary: '#ff6060',
+			},
+		},
 	},
 	variants: {
 		extend: {},

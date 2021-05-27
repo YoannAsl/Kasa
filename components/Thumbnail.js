@@ -10,7 +10,7 @@ const Thumbnail = ({ apartment }) => {
 					src={cover}
 					alt={`Photo of ${title}`}
 					layout='fill'
-					className='object-cover w-full h-full rounded-lg'
+					className='object-cover rounded-lg'
 				/>
 				<div
 					className='absolute top-0 left-0 w-full h-full rounded-lg opacity-50 bg-gradient-to-t from-black'

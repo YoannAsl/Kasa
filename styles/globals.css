@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navlink {
+	@apply text-xs font-medium uppercase text-primary sm:text-2xl sm:normal-case;
+}
+
+.active {
+	@apply underline;
+}
