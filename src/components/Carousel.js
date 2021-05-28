@@ -36,7 +36,7 @@ class Carousel extends Component {
 				/>
 
 				{/* Doesnt display the arrows if there is only 1 picture */}
-				{this.props.pictures.length !== 1 ? (
+				{this.props.pictures.length > 1 ? (
 					<>
 						<img
 							className='arrow-prev'
