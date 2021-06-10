@@ -10,7 +10,7 @@ header {
 		align-items: center;
 		justify-content: space-between;
 		:last-child {
-			margin-left: 10px;
+			margin-left: 25px;
 		}
 		a {
 			color: $primary;
@@ -29,6 +29,9 @@ header {
 			width: 145px;
 		}
 		nav {
+			:last-child {
+				margin-left: 10px;
+			}
 			a {
 				font-size: 12px;
 				text-transform: uppercase;
