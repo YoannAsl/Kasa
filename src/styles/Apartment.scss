@@ -29,10 +29,10 @@
 	}
 }
 
-.collapse-container {
+.dropdown-container {
 	display: flex;
 	justify-content: space-between;
-	.collapse {
+	.dropdown {
 		width: 46%;
 		margin: 0;
 	}
@@ -54,9 +54,9 @@
 			flex-direction: row-reverse;
 		}
 	}
-	.collapse-container {
+	.dropdown-container {
 		flex-direction: column;
-		.collapse {
+		.dropdown {
 			width: 100%;
 			margin-bottom: 20px;
 		}

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import arrow from '../assets/collapse-arrow.svg';
-import '../styles/Collapse.scss';
+import arrow from '../assets/dropdown-arrow.svg';
+import '../styles/Dropdown.scss';
 
-class Collapse extends Component {
-	state = { collapsed: true };
+class Dropdown extends Component {
+	state = { dropdownd: true };
 
 	handleClick = () => {
-		this.setState({ collapsed: !this.state.collapsed });
+		this.setState({ dropdownd: !this.state.dropdownd });
 	};
 
 	render() {
@@ -16,7 +16,7 @@ class Collapse extends Component {
 		};
 
 		// eslint-disable-next-line no-unused-expressions
-		this.state.collapsed
+		this.state.dropdownd
 			? (styles = {
 					arrow: {},
 					content: { display: 'none' },
@@ -24,7 +24,7 @@ class Collapse extends Component {
 			: styles;
 
 		return (
-			<div className='collapse'>
+			<div className='dropdown'>
 				<div className='trigger' onClick={this.handleClick}>
 					<p>{this.props.title}</p>
 					<img
@@ -41,4 +41,4 @@ class Collapse extends Component {
 	}
 }
 
-export default Collapse;
+export default Dropdown;

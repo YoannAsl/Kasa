@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/Apartment.scss';
 import { Redirect } from 'react-router-dom';
 
-import Collapse from '../components/Collapse';
+import Dropdown from '../components/Dropdown';
 import Tag from '../components/Tag';
 import Carousel from '../components/Carousel';
 import Rating from '../components/Rating';
@@ -42,8 +42,8 @@ class ApartmentPage extends Component {
 						<h1 className='apartment-title'>{title}</h1>
 						<p className='apartment-location'>{location}</p>
 						<ul className='tags'>
-							{tags.map((tag) => (
-								<Tag content={tag} key={tag} />
+							{tags.map((tag, idx) => (
+								<Tag content={tag} key={idx} />
 							))}
 						</ul>
 					</section>
@@ -53,12 +53,12 @@ class ApartmentPage extends Component {
 						<Rating rating={rating} />
 					</div>
 				</div>
-				<div className='collapse-container'>
-					<Collapse title={'Description'} content={description} />
-					<Collapse
+				<div className='dropdown-container'>
+					<Dropdown title={'Description'} content={description} />
+					<Dropdown
 						title={'Équipements'}
-						content={equipments.map((eq) => (
-							<li key={eq}>{eq}</li>
+						content={equipments.map((eq, idx) => (
+							<li key={idx}>{eq}</li>
 						))}
 					/>
 				</div>

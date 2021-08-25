@@ -1,6 +1,6 @@
 @import './variables';
 
-.collapse {
+.dropdown {
 	margin: 30px 5%;
 	.trigger {
 		cursor: pointer;
@@ -28,7 +28,7 @@
 }
 
 @media (max-width: 481px) {
-	.collapse {
+	.dropdown {
 		margin: 20px 0;
 		.trigger {
 			padding-left: 12px;

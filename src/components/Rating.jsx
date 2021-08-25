@@ -16,8 +16,8 @@ class Rating extends Component {
 
 		return (
 			<div className='rating'>
-				{stars.map((star, index) => (
-					<img src={star.link} key={index} alt={star.alt} />
+				{stars.map((star, idx) => (
+					<img src={star.link} key={idx} alt={star.alt} />
 				))}
 			</div>
 		);
